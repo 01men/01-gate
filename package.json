@@ -3,13 +3,22 @@
   "version": "0.1.0",
   "description": "01门 - Decentralized micro-task network with AI agents as demand side",
   "main": "src/index.js",
+  "bin": {
+    "01-gate": "./bin/cli.js"
+  },
   "scripts": {
     "start": "node src/index.js",
+    "cli": "node bin/cli.js",
+    "init": "node bin/cli.js init",
+    "status": "node bin/cli.js status",
+    "task": "node bin/cli.js create-task",
     "test": "echo \"No tests yet\""
   },
+  "keywords": ["blockchain", "p2p", "task", "decentralized", "ai", "agent"],
+  "author": "01men",
+  "license": "MIT",
   "dependencies": {
     "ethers": "^6.11.0",
     "uuid": "^9.0.0"
-  },
-  "devDependencies": {}
+  }
 }
