@@ -67,12 +67,12 @@ class Identity {
   /**
    * 签名
    */
-  sign(message) {
+  async sign(message) {
     if (!this.privateKey) {
       throw new Error('No private key available');
     }
     const wallet = new ethers.Wallet(this.privateKey);
-    return wallet.signMessage(message);
+    return await wallet.signMessage(message);
   }
 
   /**
@@ -80,6 +80,7 @@ class Identity {
    */
   static verify(message, signature, address) {
     try {
+      const { ethers } = require('ethers');
       const recovered = ethers.verifyMessage(message, signature);
       return recovered.toLowerCase() === address.toLowerCase();
     } catch (e) {
