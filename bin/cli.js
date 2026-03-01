@@ -5,8 +5,8 @@
  * 去中心化微任务网络命令行工具
  */
 
-const { Gate01 } = require('./src/index.js');
-const { Identity } = require('./src/identity/Identity.js');
+const { Gate01 } = require('../src/index.js');
+const { Identity } = require('../src/identity/Identity.js');
 const fs = require('fs');
 const path = require('path');
 
@@ -171,7 +171,7 @@ async function cmdReputation() {
   console.log('   信誉排名 (Top 10)');
   console.log('═══════════════════════════════════════\n');
   
-  const { ReputationOracle } = require('./src/core/Reputation.js');
+  const { ReputationOracle } = require('../src/core/Reputation.js');
   const oracle = new ReputationOracle({ storagePath: './01-gate/data/reputation.json' });
   
   const leaderboard = oracle.getLeaderboard(10);
