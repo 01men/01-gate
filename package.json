@@ -12,13 +12,32 @@
     "init": "node bin/cli.js init",
     "status": "node bin/cli.js status",
     "task": "node bin/cli.js create-task",
-    "test": "echo \"No tests yet\""
+    "test": "node test/test.js",
+    "dev": "nodemon src/index.js"
   },
-  "keywords": ["blockchain", "p2p", "task", "decentralized", "ai", "agent"],
+  "keywords": [
+    "blockchain",
+    "p2p",
+    "task",
+    "decentralized",
+    "ai",
+    "agent",
+    "microwork",
+    "freelance"
+  ],
   "author": "01men",
   "license": "MIT",
+  "homepage": "https://github.com/01men/01-gate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/01men/01-gate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/01men/01-gate/issues"
+  },
   "dependencies": {
     "ethers": "^6.11.0",
     "uuid": "^9.0.0"
-  }
+  },
+  "devDependencies": {}
 }
