@@ -26,6 +26,7 @@ const { TokenEconomics, DynamicVesting, FeeMechanism, UtilityStaking } = require
 const { PaymentGateway, PaymentService, PaymentMethod, SupportedTokens } = require('./core/Payment');
 const { MobileClientFactory, IOSClient, AndroidClient, LightObserver } = require('./mobile/MobileClient');
 const { APIAdapter, Gate01SDK, OneClickAdapter, quickStart } = require('./adapter/APIAdapter');
+const { WalletManager, BrowserWallet, PrivateKeyWallet, MnemonicWallet, WalletType, ERC20_ABI, COMMON_TOKENS } = require('./wallet/Wallet');
 
 class Gate01 {
   constructor(options = {}) {
@@ -505,7 +506,15 @@ module.exports = {
   APIAdapter,
   Gate01SDK,
   OneClickAdapter,
-  quickStart
+  quickStart,
+  // Wallet
+  WalletManager,
+  BrowserWallet,
+  PrivateKeyWallet,
+  MnemonicWallet,
+  WalletType,
+  ERC20_ABI,
+  COMMON_TOKENS
 };
 
 // CLI运行
