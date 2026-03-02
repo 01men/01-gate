@@ -4,14 +4,22 @@
  */
 
 const { Identity } = require('./identity/Identity');
-const { Task, TaskStatus } = require('./task/Task');
+const { Authorization } = require('./identity/Authorization');
+const { Task, TaskStatus, BroadcastSchedule } = require('./task/Task');
 const { MatchEngine } = require('./task/MatchEngine');
+const { BroadcastScheduler } = require('./task/BroadcastScheduler');
 const { P2PNode } = require('./p2p/Node');
+const { P2PNetwork, KademliaRouter, GossipProtocol } = require('./p2p/Network');
 const { VRF, NodeSelector } = require('./p2p/VRF');
-const { SettlementService } = require('./settlement/Settlement');
+const { SettlementService, StateChannel } = require('./settlement/Settlement');
 const { ReputationOracle, REPUTATION } = require('./core/Reputation');
 const { ArbitrationService } = require('./core/Arbitration');
+const { KlerosArbitration, DisputeManager } = require('./core/Kleros');
 const { NotificationService } = require('./core/NotificationService');
+const { TEEProof, CreditCalculator, CreditService } = require('./core/Credit');
+const { MonitoringService, MetricsCollector } = require('./core/Monitoring');
+const { PrivacyService, LocalDifferentialPrivacy } = require('./core/Privacy');
+const { SecurityFramework, SecurityEvent } = require('./core/Security');
 
 class Gate01 {
   constructor(options = {}) {
@@ -426,7 +434,47 @@ class Gate01 {
 }
 
 // 导出
-module.exports = { Gate01 };
+module.exports = { 
+  Gate01,
+  // Identity
+  Identity,
+  Authorization,
+  // Task
+  Task,
+  TaskStatus,
+  BroadcastSchedule,
+  MatchEngine,
+  BroadcastScheduler,
+  // P2P
+  P2PNode,
+  P2PNetwork,
+  KademliaRouter,
+  GossipProtocol,
+  VRF,
+  NodeSelector,
+  // Settlement
+  SettlementService,
+  StateChannel,
+  // Core
+  ReputationOracle,
+  REPUTATION,
+  ArbitrationService,
+  KlerosArbitration,
+  DisputeManager,
+  NotificationService,
+  TEEProof,
+  CreditCalculator,
+  CreditService,
+  // Monitoring
+  MonitoringService,
+  MetricsCollector,
+  // Privacy
+  PrivacyService,
+  LocalDifferentialPrivacy,
+  // Security
+  SecurityFramework,
+  SecurityEvent
+};
 
 // CLI运行
 if (require.main === module) {
