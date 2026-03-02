@@ -1,5 +1,34 @@
 # 更新日志
 
+## [0.4.0] - 2026-03-02
+
+### 新增功能
+
+#### 智能合约 (contracts/)
+- `Reputation.sol` - 链上信誉合约
+- `Arbitration.sol` - 增强仲裁合约 (LQC逻辑质量系数)
+- `TaskRegistry.sol` - 任务注册表合约
+- 完善 `StateChannelSettlement.sol`
+
+#### 仲裁增强 (LQC)
+- 逻辑质量系数评分
+- 双轨激励机制
+- 陪审员质押与奖励
+- 上诉机制
+
+#### API 适配器 (src/adapter/APIAdapter.js)
+- RESTful API 服务
+- 一键启动 (`npm run api`)
+- Gate01SDK 封装
+- OneClickAdapter 快速接入
+
+### 优化
+
+- 任务匹配引擎加权算法
+- 手续费折扣计算
+
+---
+
 ## [0.3.0] - 2026-03-02
 
 ### 新增功能

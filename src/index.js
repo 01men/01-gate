@@ -25,6 +25,7 @@ const { ProofOfPersonhood, VerificationLevel } = require('./core/ProofOfPersonho
 const { TokenEconomics, DynamicVesting, FeeMechanism, UtilityStaking } = require('./core/Economics');
 const { PaymentGateway, PaymentService, PaymentMethod, SupportedTokens } = require('./core/Payment');
 const { MobileClientFactory, IOSClient, AndroidClient, LightObserver } = require('./mobile/MobileClient');
+const { APIAdapter, Gate01SDK, OneClickAdapter, quickStart } = require('./adapter/APIAdapter');
 
 class Gate01 {
   constructor(options = {}) {
@@ -499,7 +500,12 @@ module.exports = {
   MobileClientFactory,
   IOSClient,
   AndroidClient,
-  LightObserver
+  LightObserver,
+  // Adapter
+  APIAdapter,
+  Gate01SDK,
+  OneClickAdapter,
+  quickStart
 };
 
 // CLI运行

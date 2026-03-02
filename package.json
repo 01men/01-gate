@@ -13,7 +13,9 @@
     "status": "node bin/cli.js status",
     "task": "node bin/cli.js create-task",
     "test": "node test/test.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "api": "node src/adapter/APIAdapter.js",
+    "serve": "node -e \"const {quickStart}=require('./src/adapter/APIAdapter.js'); quickStart()\""
   },
   "keywords": [
     "blockchain",
@@ -38,6 +40,8 @@
   "dependencies": {
     "ethers": "^6.11.0",
     "uuid": "^9.0.0",
+    "express": "^4.18.2",
+    "crypto-js": "^4.2.0",
     "libp2p": "^1.2.0",
     "libp2p-tcp": "^0.17.2",
     "libp2p-websockets": "^0.16.2",
