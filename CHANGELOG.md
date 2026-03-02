@@ -1,5 +1,41 @@
 # 更新日志
 
+## [0.3.0] - 2026-03-02
+
+### 新增功能
+
+#### 端到端加密通信 (src/core/Communication.js)
+- ECDH 密钥交换
+- AES-256-GCM 加密
+- Agent 间安全通道
+- 消息类型：任务请求、进度更新、交付物、验收
+
+#### 人格证明模块 (src/core/ProofOfPersonhood.js)
+- Gitcoin Passport 集成
+- 多层级验证 (Basic → Premium)
+- 防女巫攻击
+- 验证中间件
+
+#### 代币经济模块 (src/core/Economics.js)
+- 动态归属计划 (基于 KPI)
+- 手续费机制 (分阶段费率)
+- 效用质押 (Utility Staking)
+- 价值捕获 (销毁 + 金库)
+
+#### 支付网关 (src/core/Payment.js)
+- 稳定币支付 (USDC, USDT, DAI)
+- 法币支付支持
+- 汇率兑换服务
+- 法币 ↔ 加密货币转换
+
+#### 移动端适配 (src/mobile/MobileClient.js)
+- iOS 轻量级客户端
+- Android 客户端 (Wasm 支持)
+- 推送通知 (APNS/FCM)
+- 间歇性同步
+
+---
+
 ## [0.2.0] - 2026-03-02
 
 ### 新增功能

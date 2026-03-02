@@ -20,6 +20,11 @@ const { TEEProof, CreditCalculator, CreditService } = require('./core/Credit');
 const { MonitoringService, MetricsCollector } = require('./core/Monitoring');
 const { PrivacyService, LocalDifferentialPrivacy } = require('./core/Privacy');
 const { SecurityFramework, SecurityEvent } = require('./core/Security');
+const { CommunicationService, MessageType } = require('./core/Communication');
+const { ProofOfPersonhood, VerificationLevel } = require('./core/ProofOfPersonhood');
+const { TokenEconomics, DynamicVesting, FeeMechanism, UtilityStaking } = require('./core/Economics');
+const { PaymentGateway, PaymentService, PaymentMethod, SupportedTokens } = require('./core/Payment');
+const { MobileClientFactory, IOSClient, AndroidClient, LightObserver } = require('./mobile/MobileClient');
 
 class Gate01 {
   constructor(options = {}) {
@@ -473,7 +478,28 @@ module.exports = {
   LocalDifferentialPrivacy,
   // Security
   SecurityFramework,
-  SecurityEvent
+  SecurityEvent,
+  // Communication
+  CommunicationService,
+  MessageType,
+  // Proof of Personhood
+  ProofOfPersonhood,
+  VerificationLevel,
+  // Economics
+  TokenEconomics,
+  DynamicVesting,
+  FeeMechanism,
+  UtilityStaking,
+  // Payment
+  PaymentGateway,
+  PaymentService,
+  PaymentMethod,
+  SupportedTokens,
+  // Mobile
+  MobileClientFactory,
+  IOSClient,
+  AndroidClient,
+  LightObserver
 };
 
 // CLI运行
